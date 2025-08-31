@@ -70,10 +70,24 @@ Once the application is running, you can:
 - Remove a todo by clicking the delete button next to it.
 - Toggle the completion status by clicking on the todo item.
 
-## Contributing
+## Testing
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or features.
+This project uses [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for unit testing.
 
-## License
+### Running Tests
 
-This project is licensed under the MIT License.
+To run all tests, use:
+
+```bash
+npm test
+```
+
+Test files are located alongside components and use the `.test.tsx` or `.test.ts` extension.
+
+### Example
+
+To run tests with coverage:
+
+```bash
+npm test -- --coverage
+```
