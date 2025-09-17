@@ -29,7 +29,7 @@ To get a local copy up and running, follow these steps:
 2. Navigate to the project directory:
 
    ```bash
-   cd nextjs-todo-app
+   cd NextTodo
    ```
 
 3. Install the dependencies:
