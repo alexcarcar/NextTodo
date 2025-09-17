@@ -9,40 +9,17 @@ interface TodoListProps {
 
 const TodoList: React.FC<TodoListProps> = ({ todos, onToggle, onRemove }) => {
   return (
-    <div style={{ maxWidth: '500px', margin: '0 auto' }}>
-      <ul style={{ padding: 0, listStyle: 'none' }}>
+    <div className="todo-list-container">
+      <ul className="todo-list">
         {todos.map(todo => (
-          <li
-            key={todo.id}
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              padding: '8px 0',
-              borderBottom: '1px solid #ddd',
-            }}
-          >
+          <li key={todo.id} className="todo-item">
             <span
-              style={{
-                textDecoration: todo.completed ? 'line-through' : 'none',
-                flex: 1,
-                cursor: 'pointer',
-              }}
+              className={`todo-text ${todo.completed ? 'completed' : ''}`}
               onClick={() => onToggle(todo.id)}
             >
               {todo.text}
             </span>
-            <button
-              onClick={() => onRemove(todo.id)}
-              style={{
-                marginLeft: '16px',
-                padding: '4px 8px',
-                backgroundColor: '#e00',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '4px',
-              }}
-            >
+            <button className="remove-button" onClick={() => onRemove(todo.id)}>
               Remove
             </button>
           </li>
